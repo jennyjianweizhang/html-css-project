@@ -1,0 +1,385 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+.box {
+  width: 100%;
+  height: 71px;
+  background: url(https://weatherstack.com/site_images/mountains.svg), linear-gradient(135deg, #1f4e69 0, #164058 100%), center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.box .container {
+  position: relative;
+  height: 71px;
+}
+.box .container .nav {
+  display: flex;
+  justify-content: space-between;
+  height: 70px;
+  align-items: center;
+  font-family: sans-serif;
+}
+.box .container .nav .menu {
+  display: flex;
+  justify-content: space-evenly;
+  width: 580px;
+  align-items: center;
+}
+.box .container .nav .menu li a {
+  color: white;
+}
+.box .container .nav .menu li a:hover {
+  text-decoration: underline;
+}
+.box .container .nav .menu li:nth-child(5)::before {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #47c652;
+  border-radius: 25px;
+  margin-right: 8px;
+}
+.box .container .nav .menu .logIn {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 0 10px;
+  border-radius: 3px;
+  line-height: 34px;
+  font-size: 13px;
+}
+.box .container .nav .menu .signUp {
+  background: #f47b21;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 0px 10px;
+  line-height: 34px;
+  font-size: 13px;
+}
+.container {
+  width: 1170px;
+  height: 800px;
+  margin: auto;
+}
+.hero {
+  padding: 60px 0 30px;
+  color: #16222f;
+  margin-bottom: 0;
+  background-color: #eff2f5;
+  background-size: 30%;
+  background-repeat: no-repeat;
+  font-family: sans-serif;
+}
+.hero .container {
+  height: 177px;
+}
+.hero .container h3 {
+  font-size: 20px;
+  margin: 0px 0px 13px 30px;
+  font-weight: 200;
+  position: relative;
+}
+.hero .container p {
+  max-width: 450px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.hero .left {
+  display: inline-block;
+  width: 550px;
+  text-align: left;
+  padding: 10px;
+}
+.hero .left h3::before {
+  font-family: "Material Symbols Outlined";
+  content: "\eb9b";
+  font-size: 28px;
+  font-weight: 300;
+  margin-right: 10px;
+  position: absolute;
+  left: -32px;
+  top: -4px;
+}
+.hero .left .sign_up {
+  background: #244f67;
+  padding: 10px 10px;
+  color: #fff;
+  border-radius: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+  width: 190px;
+  text-align: center;
+}
+.hero .right {
+  display: inline-block;
+  width: 550px;
+  text-align: left;
+  padding: 10px;
+  margin-top: 0px;
+}
+.hero .right h3::before {
+  font-family: "Material Symbols Outlined";
+  content: "\e873";
+  font-size: 28px;
+  font-weight: 300;
+  margin-right: 10px;
+  position: absolute;
+  left: -32px;
+  top: -4px;
+}
+.hero .right .go_to_code_examples {
+  padding: 10px 10px;
+  border-radius: 3px;
+  font-size: 13px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-top: 20px;
+  display: block;
+  width: 190px;
+  text-align: center;
+  background: #dde0e2;
+  color: #637280;
+}
+.api_documentation {
+  padding: 30px 0;
+  color: #16222f;
+  font-family: sans-serif;
+}
+.api_documentation .container {
+  height: 26100px;
+}
+.api_documentation .container .menu {
+  float: left;
+  width: 250px;
+  margin-top: 15px;
+  border-right: 1px solid #eee;
+}
+.api_documentation .container .menu ul.github {
+  font-weight: 600;
+  padding: 10px 15px 11px 45px;
+  position: relative;
+  font-size: 14px;
+  background: #eee;
+}
+.api_documentation .container .menu ul.github li a {
+  font-weight: 700;
+  font-size: 15px;
+  margin-left: -10px;
+}
+.api_documentation .container .menu ul.github li a::before {
+  background: url(images/github_x2.png);
+  content: '';
+  padding: 10px;
+  position: absolute;
+  left: 15px;
+  background-size: contain;
+}
+.api_documentation .container .menu .doc_heading {
+  font-weight: 600;
+  padding: 10px 15px 11px;
+  font-size: 16px;
+}
+.api_documentation .container .menu a {
+  padding: 5px 15px;
+  display: block;
+  font-weight: 300;
+  color: #16222f;
+}
+.api_documentation .container .content {
+  float: right;
+  width: 860px;
+}
+.api_documentation .container .content .topic {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+.api_documentation .container .content .topic:not(#api_error_codes):not(#query_parameter) table tr td:first-child {
+  width: 33%;
+}
+.api_documentation .container .content .topic h2 {
+  font-weight: 500;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.api_documentation .container .content .topic h3 {
+  font-size: 19px;
+  margin-top: 10px;
+  font-weight: 400;
+  border-bottom: 1px solid #dde1e7;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
+}
+.api_documentation .container .content .topic h3 span {
+  float: right;
+  font-size: 14px;
+  background: rgba(40, 63, 89, 0.15);
+  padding: 1px 5px 3px;
+  border-radius: 3px;
+  color: rgba(0, 0, 0, 0.5);
+}
+.api_documentation .container .content .topic p {
+  margin-bottom: 15px;
+  font-size: 14px;
+  line-height: 20px;
+}
+.api_documentation .container .content .topic p a {
+  text-decoration: underline;
+  color: #283f59;
+}
+.api_documentation .container .content .topic code {
+  padding: 2px 4px;
+  color: #c7254e;
+  background-color: #f9f2f4;
+  border-radius: 4px;
+}
+.api_documentation .container .content .topic pre {
+  background: #192738;
+  padding: 15px;
+  width: 100%;
+  color: #fff;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 13px;
+  max-width: 100%;
+  position: relative;
+}
+.api_documentation .container .content .topic pre .execute {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 8px 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 3px;
+  cursor: pointer;
+  color: #fff;
+  font-family: sans-serif;
+}
+.api_documentation .container .content .topic pre .orange,
+.api_documentation .container .content .topic pre .str {
+  color: #ffce54;
+}
+.api_documentation .container .content .topic pre .kwd,
+.api_documentation .container .content .topic pre .lit {
+  color: #a0d468;
+}
+.api_documentation .container .content .topic pre .typ {
+  color: #4fc1e9;
+}
+.api_documentation .container .content .topic .alert {
+  border-left: 4px solid #5bc0de;
+  background-color: #f4f8fa;
+  padding: 10px 15px;
+  margin-bottom: 30px;
+}
+.api_documentation .container .content .topic .warning {
+  border-left-color: #c7254e;
+  background: #f9f2f4;
+}
+.api_documentation .container .content .topic table {
+  border-collapse: collapse;
+  margin-top: 25px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.api_documentation .container .content .topic table th {
+  padding: 12px 15px;
+  background-color: #f2f2f2;
+  border-bottom: 1px solid #e0e0e0;
+  border-top: 1px solid #e0e0e0;
+  font-weight: 600;
+  text-align: left;
+}
+.api_documentation .container .content .topic table td {
+  padding: 10px 15px;
+  border-bottom: 1px dashed #e0e0e0;
+  color: #283F59;
+  font-weight: 100;
+  font-size: 14px;
+}
+.api_documentation .container .content .topic table td a {
+  text-decoration: underline;
+  color: #283f59;
+}
+.ctaBox {
+  padding: 25px 0 28px;
+  background: #ebeff4;
+  font-size: 14px;
+  color: #16222f;
+  font-family: sans-serif;
+  text-align: center;
+  height: 21.5px;
+}
+.ctaBox .container {
+  height: 21.5px;
+}
+.ctaBox .cta_text {
+  font-weight: 500;
+  font-size: 17px;
+}
+.ctaBox a {
+  background: #244f67;
+  padding: 13px 15px;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  margin-left: 10px;
+}
+footer {
+  background-color: #184157;
+  color: #fff;
+  font-size: 14px;
+  font-family: sans-serif;
+  font-weight: 200;
+  padding: 70px 0px;
+  line-height: 30px;
+  height: 400px;
+}
+footer .container {
+  height: 400px;
+}
+footer .container .upper_footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer .container .upper_footer .left_footer {
+  width: 308px;
+  height: 190px;
+}
+footer .container .upper_footer .left_footer .social div {
+  margin: 0 3px;
+}
+footer .container .upper_footer .left_footer .social div,
+footer .container .upper_footer .left_footer footer ul {
+  display: inline-block;
+}
+footer .container .right_footer1,
+footer .container .right_footer2,
+footer .container .right_footer3,
+footer .container .right_footer4 {
+  width: 196px;
+  height: 190px;
+}
+footer .container .right_footer1 a,
+footer .container .right_footer2 a,
+footer .container .right_footer3 a,
+footer .container .right_footer4 a {
+  color: #fff;
+}
+footer .container .bottom_footer {
+  text-align: center;
+  margin: 70px 0 15px 0;
+  letter-spacing: 1px;
+}
+footer .container .bottom_footer a {
+  color: #fff;
+}

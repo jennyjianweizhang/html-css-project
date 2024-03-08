@@ -1,0 +1,585 @@
+@import './common.less';
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.box{
+    width: 100%;
+    height: 500px;
+    background: url(https://weatherstack.com/site_images/mountains.svg),linear-gradient(135deg, #1f4e69 0, #164058 100%),center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .container{
+        height: 500px;
+        position: relative;
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            align-items: center;
+            font-family: sans-serif;
+        
+            .menu{
+                display: flex;
+                justify-content: space-evenly;
+                width: 580px;
+                align-items: center;
+                li a{
+                    color: white;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                li:nth-child(5)::before{
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #47c652;
+                    border-radius: 25px;
+                    margin-right: 8px;
+                }
+                .logIn{
+                    background: rgba(255, 255, 255, .15);
+                    padding: 0 10px;
+                    border-radius: 3px;
+                    line-height: 34px;
+                    font-size: 13px;
+                }
+                .signUp{
+                    background: #f47b21;
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 0px 10px;
+                    line-height: 34px;
+                    font-size: 13px;
+                }
+            }
+        }
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            height: 60px;
+            align-items: center;
+            font-family: sans-serif;
+        
+            .menu{
+                display: flex;
+                justify-content: space-evenly;
+                width: 580px;
+                align-items: center;
+                li a{
+                    color: white;
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+                li:nth-child(5)::before{
+                    content: '';
+                    display: inline-block;
+                    width: 10px;
+                    height: 10px;
+                    background-color: #47c652;
+                    border-radius: 25px;
+                    margin-right: 8px;
+                }
+                .logIn{
+                    background: rgba(255, 255, 255, .15);
+                    padding: 0 10px;
+                    border-radius: 3px;
+                    line-height: 34px;
+                    font-size: 13px;
+                }
+                .signUp{
+                    background: #f47b21;
+                    color: #fff;
+                    text-transform: uppercase;
+                    padding: 0px 10px;
+                    line-height: 34px;
+                    font-size: 13px;
+                }
+            }
+        }
+                
+    }
+}
+
+
+
+.left{
+    float: left;
+    width: 433px;
+    height: 400px;
+    color: white;
+    font-family:sans-serif;
+    margin-top: 67px;
+    h1{ 
+        font-weight: 500;
+        margin-bottom: 20px;
+        font-size: 32px;
+    }
+    h2{
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 25px;
+        margin: 10px 0px 17px; 
+        
+    }
+    .trophyContainer {
+        font-size: 17px;
+        font-family: sans-serif;
+        font-weight: 300;
+        margin: 25px 0 15px 0;
+        border: 0 solid rgba(255, 255, 255, 1);
+        border-radius: 17px;
+        padding: 6px 10px 13px 16px;
+        line-height: 20px;
+        width: 388px;
+        background: rgba(255, 255, 255, .1); 
+    }
+    .buttonContainer {
+        margin: 30px 5px 0 0;
+        position: relative;
+        .button{
+            display: inline-block;
+            background-color: #f47b21;
+            width: 230px;
+            height: 60px;
+            border-radius: 3px;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, .05), 0 1px 3px rgba(0, 0, 0, .05);
+            line-height: 60px;
+            text-align: center;
+            font-size: 14px;    
+            font-weight: 700;
+            color: white;
+        }  
+        .free{
+            display: inline-block;
+            font-family: serif;
+            font-size: 19px;
+            position: absolute;
+            top:20px;
+            right:100px;
+        } 
+    } 
+}
+
+
+.material-symbols-outlined{
+    font-size:25px;
+    position: relative;
+    left: 0;
+    top: 5px;
+    margin-right: 10px
+}
+
+
+ 
+.menu li a:link, .button:link,.ctaBox a:link, footer a:link{
+    color: white;
+    text-decoration: none;
+}
+.menu li a:visited, .button:visited,.ctaBox a:visited,footer a:visited {
+    color: white;
+}
+.menu li a:hover, .button:hover, .exampleButton a:hover,.ctaBox a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+
+.right{
+    float: right;
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    border: 4px solid #608094;
+    background: #16394c;
+    color: white;
+    margin-top: 67px;
+}
+.title{
+    height: 40px;
+    /* 水平和垂直居中 */
+    text-align: center;
+    line-height: 40px;
+    margin-top: 10px;
+}
+.main{
+    display: flex;
+    height: 137px;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.image{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin-top: -40px;
+}
+.clear{
+    margin-top: -20px;
+}
+.temp{
+    font-size: 30px;
+}
+.des{
+    font-size: 14px;
+}
+.forecast{
+    display: flex;
+    justify-content: space-around;
+}
+.dayContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -3px;
+}
+.imgW{
+    margin-top: 10px;
+}
+.temprature{
+    margin-top: 3px;
+}
+.logoBox{
+    width: 100%;
+    height: 80px;
+    padding: 40px 0 12px;
+    background-color: #eff2f5;
+}
+.logoBox .container{
+    height: 80px;
+}
+.logos{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.customer{
+    font-family: Promo, Helvetica, Arial, sans-serif;
+}
+.featureBackground{
+    background: #eff2f5;
+    border-radius: 5px;
+    width: 1140px;
+    height: 209.914px;
+    margin-top: 40px;
+    padding: 18px 0 19px 0;
+}
+.featureIcon{
+    font-weight: 200;
+}
+.showBox{
+    display: inline-block;
+    width: 230px;
+    height: 190px;
+    text-align: left;
+    margin: 0 12px;
+    border-radius: 5px;
+    vertical-align: text-top;
+    background-color: #ebeff4;
+    font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+    padding: 10px;
+}
+h5{
+    line-height: 20px;
+    font-size: 16px;
+    margin: 10px 0;
+    font-weight: 600;
+}
+.mapSection{
+    padding: 25px 0 65px 0;
+}
+.mapLeft{
+    float: left;
+    width: 440px;
+    font-family: sans-serif;
+    color: #000;
+}
+h4{
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: 600;
+    margin: 50px 0 15px 0;
+}
+.mapLeft>p{
+    font-size: 15px;
+    margin-bottom: 15px;
+    line-height: 20px;
+}
+.mapList{
+    margin-bottom: 5px;
+    font-size: 15px;
+}
+.mapDetail{
+    margin-bottom: 5px;
+}
+.worldMap{
+    float: right;
+    margin-top: 30px;
+}
+.clearfloat{
+    clear: both;
+}
+
+.codeBox{
+    width: 100%;
+    height: 1350px;
+    background: url(https://weatherstack.com/site_images/bg_waves_4.svg),#184157;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px 0 40px 0;
+}
+.example,.exampleHead,.exampleDes{
+    text-align: center;
+    color: white;
+    font-family: sans-serif;
+    display: block;
+}
+.example{
+    font-size: 14px;
+    font-weight: bold;
+    background: #416376;
+    width: 100px;
+    border-radius: 99px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: -5px;
+    padding: 10px 0 11px 0;
+}
+.exampleHead{
+    font-size: 25px;
+    margin: 0px 0px 15px;
+}
+.exampleDes{
+    font-size: 20px;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+}
+.exampleButton{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px 10px 18px 10px;
+    font-weight: 100;
+    margin-top: 30px;
+    font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+    font-size: 14px;
+}
+
+.CurrentWeather{
+    background: #f47b21;
+    border-color: #f47b21;
+    color: #ffffff;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    padding: 16px 40px 18px 40px;
+    border: 1px solid #f47b21;
+}
+.WeatherHistory, .WeatherForecast{
+    padding: 16px 40px 18px 40px;
+    background: #ffffff;
+    font-weight: 600;
+    border: 1px solid rgba(0, 0, 0, .1);
+    color: #283f59;
+}
+.WeatherForecast{
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.codes{
+    background: #17242b;
+    border-radius: 5px;
+    margin: 0 auto;
+    margin-top: 20px;
+    height: 740px;
+    font-size: 12px;
+    line-height: 1.5;
+    width: 580px;
+    color: #ffce54;
+    text-align:left;
+}
+.pre{
+    width: 100%;
+    margin-left: -135px;
+}
+.codeFeatureBox{
+    width: 1170px;
+    margin: 0 auto;
+    font-size: 14px;
+}
+.codeFeature{
+    display: inline-block;
+    width: 370px;
+    padding: 14px 20px 15px 20px;
+    margin: 20px 5px 15px 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, .1);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    color: white;
+    font-family: sans-serif;
+    /* 调整盒子模型，content-box会因为padding+border撑大盒子。不设置border-box就需要width减去padding和border */
+    box-sizing:border-box;
+}
+.codeFeature p{
+    font-size: 14px;
+    font-weight: 300;
+    margin-top: 10px;
+    line-height: 1.5;
+}
+.partners{
+    overflow: hidden;
+}
+.partners h4{
+    font-size: 25px;
+    margin-top: 25px;
+    font-weight: 500;
+    font-family: sans-serif;
+    text-align: center;
+}
+.partners h5{
+    max-width: 600px;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px auto;
+    font-weight: 200;
+}
+.brand_list li {
+    display: inline-block;
+    width: 250px;
+    height: 100px;
+    border-radius: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    /* 问题：我想在这里集中加background的内容，但是无法实现
+    background-repeat: no-repeat;
+    background-position: center; */
+}
+li.daimler {
+    background: #263e6a url(./images/clients/client_white_daimler.svg);
+    background-size: 175px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li.deloitte {
+    background: #eef2f5 url(./images/clients/client_deloitte.svg);
+    background-size: 150px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li.eric {
+    background: #01275b url(./images/clients/client_white_ericsson_2.svg);
+    background-size: 65px;
+    width: 135px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li.microsoft {
+    background: #eef2f5 url(./images/clients/client_microsoft.svg);
+    background-size: 175px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li.sch {
+    background: #009e4d url(./images/clients/client_white_schneider.svg);
+    background-size: 150px;
+    width: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+li.wb {
+    background: #027ac2 url(./images/clients/client_white_warnerbros.svg);
+    background-size: 65px;
+    width:190px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li.ww {
+    background: #ee2e25 url(./images/clients/client_white_wawa.svg);
+    background-size: 110px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li.canda {
+    background: #eef2f5 url(./images/clients/client_canda.svg);
+    background-size: 90px;
+    width: 135px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li.mckinsey {
+    background: #23477f url(./images/clients/client_mckinsey.svg);
+    background-size: 250px;
+    width: 260px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+li.rimowa {
+    background: #eef2f5 url(./images/clients/client_rimowa.svg);
+    background-size: 155px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.ctaBox{
+    background-color: #eef2f5;
+    font-family: sans-serif;
+    text-align: center;
+    padding: 45px 30px 50px 30px;
+}
+.cta_text{
+    font-weight: 500;
+    font-size: 17px;
+}
+.arrow_right{
+    font-weight: 300;
+}
+.ctaBox a{
+    background: #f47b21;
+    padding: 17px 15px;
+    border-radius: 3px;
+    font-size: 13px;
+}
+/* 问题：官网往下拉到最下面没有白边，我这个有 */
+footer{
+    background-color: #184157;
+    color: #fff;
+    font-size: 14px;
+    font-family: sans-serif;
+    font-weight: 200;
+    padding: 50px 0;
+    line-height: 30px;
+}
+.social div,footer ul{
+    display: inline-block;
+}
+.social div{
+    margin: 0 3px;
+}
+.upper_footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.left_footer{
+    width: 308px;
+    height: 190px;
+}
+.right_footer1,.right_footer2, .right_footer3, .right_footer4{
+    width: 196px;
+    height: 190px;
+}
+.bottom_footer{
+    text-align: center;
+    margin: 70px 0 15px 0;
+    letter-spacing: 1px;
+}
+

@@ -1,0 +1,868 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weatherstack</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="./homepage/homepage.css">
+    <!-- <style>
+        
+        body{
+            background-color: #184157;
+        }
+        .box{
+            width: 100%;
+            height: 500px;
+            background: url(https://weatherstack.com/site_images/mountains.svg),linear-gradient(135deg, #1f4e69 0, #164058 100%),center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        .container {
+            max-width: 1170px;
+            margin: 0 auto;
+        }
+        .box .container{
+            height: 500px;
+            position: relative;
+        }
+    
+        .nav{
+            display: flex;
+            justify-content: space-between;
+            height: 70px;
+            align-items: center;
+        }
+        .nav .menu{
+            display: flex;
+            justify-content: space-evenly;
+            width: 580px;
+            align-items: center;
+        }
+
+        .menu li:nth-child(5)::before{
+            content: '';
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            background-color: #47c652;
+            border-radius: 25px;
+            margin-right: 8px;
+        }
+        .logIn{
+            background: rgba(255, 255, 255, .15);
+            padding: 10px 10px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+        .signUp{
+            background: #f47b21;
+            color: #fff;
+            text-transform: uppercase;
+            padding: 10px 10px;
+            font-size: 13px;
+        }
+        .left{
+            float: left;
+            width: 433px;
+            height: 400px;
+            color: white;
+            font-family:sans-serif;
+            margin-top: 50px;
+        }
+        h1{ 
+            font-weight: 500;
+            margin-bottom: 20px;
+            font-size: 32px;
+        }
+        h2{
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 25px;
+            margin: 10px 0px 17px; 
+        }
+        .trophyContainer {
+            font-size: 17px;
+            font-family: sans-serif;
+            font-weight: 300;
+            margin: 25px 0 15px 0;
+            border: 0 solid rgba(255, 255, 255, 1);
+            border-radius: 17px;
+            padding: 6px 10px 13px 16px;
+            line-height: 20px;
+            width: 388px;
+            background: rgba(255, 255, 255, .1); 
+        }
+        .material-symbols-outlined{
+            font-size:25px;
+            position: relative;
+            left: 0;
+            top: 5px;
+            margin-right: 10px
+        }
+
+        .buttonContainer {
+            margin: 30px 5px 0 0;
+            position: relative;
+        } 
+        .button{
+            display: inline-block;
+            background-color: #f47b21;
+            width: 230px;
+            height: 60px;
+            border-radius: 3px;
+            box-shadow: 0 4px 6px rgba(50, 50, 93, .05), 0 1px 3px rgba(0, 0, 0, .05);
+            line-height: 60px;
+            text-align: center;
+            font-size: 14px;    
+            font-weight: 700;
+            color: white;
+        }   
+
+        .menu li a:visited, .button:visited,.ctaBox a:visited,footer a:visited {
+            color: white;
+        }
+        .menu li a:hover, .button:hover, .exampleButton a:hover,.ctaBox a:hover, footer a:hover{
+            text-decoration: underline;
+        }
+  
+        .free{
+            display: inline-block;
+            font-family: 'Caveat', serif;
+            font-size: 19px;
+            position: absolute;
+            top:20px;
+            right:100px;
+        } 
+        .right{
+            float: right;
+            width: 500px;
+            height: 300px;
+            border-radius: 10px;
+            border: 4px solid #608094;
+            background: #16394c;
+            color: white;
+            margin-top: 50px;
+        }
+        .title{
+            height: 40px;
+            /* 水平和垂直居中 */
+            text-align: center;
+            line-height: 40px;
+            margin-top: 10px;
+        }
+        .main{
+            display: flex;
+            height: 137px;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .image{
+            display: flex;
+            flex-direction: column;
+            align-items:center;
+            justify-content:center;
+            margin-top: -40px;
+        }
+        .clear{
+            margin-top: -20px;
+        }
+        .temp{
+            font-size: 30px;
+        }
+        .des{
+            font-size: 14px;
+        }
+        .forecast{
+            display: flex;
+            justify-content: space-around;
+        }
+        .dayContainer{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            margin-top: -3px;
+        }
+        .imgW{
+            margin-top: 10px;
+        }
+        .temprature{
+            margin-top: 3px;
+        }
+        .logoBox{
+            width: 100%;
+            height: 80px;
+            padding: 40px 0 12px;
+            background-color: #eff2f5;
+        }
+        .logoBox .container{
+            height: 80px;
+        }
+        .logos{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .customer{
+            font-family: Promo, Helvetica, Arial, sans-serif;
+        }
+        .feature_container, .index{
+            background-color:white;
+        }
+        .featureBackground{
+            background: #eff2f5;
+            border-radius: 5px;
+            width: 1140px;
+            height: 209.914px;
+            margin-top: 40px;
+            padding: 18px 0 19px 0;
+        }
+        .featureIcon{
+            font-weight: 200;
+        }
+        .showBox{
+            display: inline-block;
+            width: 230px;
+            height: 190px;
+            text-align: left;
+            margin: 0 12px;
+            border-radius: 5px;
+            vertical-align: text-top;
+            background-color: #ebeff4;
+            font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+            padding: 10px;
+        }
+        h5{
+            line-height: 20px;
+            font-size: 16px;
+            margin: 10px 0;
+            font-weight: 600;
+        }
+        .mapSection{
+            padding: 25px 0 65px 0;
+        }
+        .mapLeft{
+            float: left;
+            width: 440px;
+            font-family: sans-serif;
+            color: #000;
+        }
+        h4{
+            font-size: 25px;
+            font-family: sans-serif;
+            font-weight: 600;
+            margin: 50px 0 15px 0;
+        }
+        .mapLeft>p{
+            font-size: 15px;
+            margin-bottom: 15px;
+            line-height: 20px;
+        }
+        .mapList{
+            margin-bottom: 5px;
+            font-size: 15px;
+        }
+        .mapDetail{
+            margin-bottom: 5px;
+        }
+        .worldMap{
+            float: right;
+            margin-top: 30px;
+        }
+        .clearfloat{
+            clear: both;
+        }
+
+        .codeBox{
+            width: 100%;
+            height: 1350px;
+            background: url(https://weatherstack.com/site_images/bg_waves_4.svg),#184157;
+            background-repeat: no-repeat;
+            background-size: cover;
+            padding: 40px 0 40px 0;
+        }
+        .example,.exampleHead,.exampleDes{
+            text-align: center;
+            color: white;
+            font-family: sans-serif;
+            display: block;
+        }
+        .example{
+            font-size: 14px;
+            font-weight: bold;
+            background: #416376;
+            width: 100px;
+            border-radius: 99px;
+            margin: 0 auto;
+            margin-bottom: 30px;
+            margin-top: -5px;
+            padding: 10px 0 11px 0;
+        }
+        .exampleHead{
+            font-size: 25px;
+            margin: 0px 0px 15px;
+        }
+        .exampleDes{
+            font-size: 20px;
+            font-weight: 500;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .exampleButton{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 16px 10px 18px 10px;
+            font-weight: 100;
+            margin-top: 30px;
+            font-family: "Open Sans", "Gill Sans MT", "Gill Sans", Corbel, Arial, sans-serif;
+            font-size: 14px;
+        }
+        
+        .CurrentWeather{
+            background: #f47b21;
+            border-color: #f47b21;
+            color: #ffffff;
+            border-top-left-radius: 5px;
+            border-bottom-left-radius: 5px;
+            padding: 16px 40px 18px 40px;
+            border: 1px solid #f47b21;
+        }
+        .WeatherHistory, .WeatherForecast{
+            padding: 16px 40px 18px 40px;
+            background: #ffffff;
+            font-weight: 600;
+            border: 1px solid rgba(0, 0, 0, .1);
+            color: #283f59;
+        }
+        .WeatherForecast{
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+        .codes{
+            background: #17242b;
+            border-radius: 5px;
+            margin: 0 auto;
+            margin-top: 20px;
+            height: 740px;
+            font-size: 12px;
+            line-height: 1.5;
+            width: 580px;
+            color: #ffce54;
+            text-align:left;
+        }
+        .pre{
+            width: 100%;
+            margin-left: -135px;
+        }
+        .codeFeatureBox{
+            width: 1170px;
+            margin: 0 auto;
+            font-size: 14px;
+        }
+        .codeFeature{
+            display: inline-block;
+            width: 370px;
+            padding: 14px 20px 15px 20px;
+            margin: 20px 5px 15px 5px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, .1);
+            box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+            color: white;
+            font-family: sans-serif;
+            /* 调整盒子模型，content-box会因为padding+border撑大盒子。不设置border-box就需要width减去padding和border */
+            box-sizing:border-box;
+        }
+        .codeFeature p{
+            font-size: 14px;
+            font-weight: 300;
+            margin-top: 10px;
+            line-height: 1.5;
+        }
+        .partners{
+            overflow: hidden;
+        }
+        .partners h4{
+            font-size: 25px;
+            margin-top: 25px;
+            font-weight: 500;
+            font-family: sans-serif;
+            text-align: center;
+        }
+        .partners h5{
+            max-width: 600px;
+            font-size: 20px;
+            text-align: center;
+            margin: 20px auto;
+            font-weight: 200;
+        }
+        .brand_list li {
+            display: inline-block;
+            width: 250px;
+            height: 100px;
+            border-radius: 5px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        .partners .brand_list li {
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+        li.daimler {
+            background: #263e6a url(./images/clients/client_white_daimler.svg);
+            background-size: 175px;
+        }
+        li.deloitte {
+            background: #eef2f5 url(./images/clients/client_deloitte.svg);
+            background-size: 150px;
+        }
+        li.eric {
+            background: #01275b url(./images/clients/client_white_ericsson_2.svg);
+            background-size: 65px;
+            width: 135px;
+        }
+        li.microsoft {
+            background: #eef2f5 url(./images/clients/client_microsoft.svg);
+            background-size: 175px;
+        }
+        li.sch {
+            background: #009e4d url(./images/clients/client_white_schneider.svg);
+            background-size: 150px;
+            width: 200px;
+        }
+        li.wb {
+            background: #027ac2 url(./images/clients/client_white_warnerbros.svg);
+            background-size: 65px;
+            width:190px;
+        }
+
+        li.ww {
+            background: #ee2e25 url(./images/clients/client_white_wawa.svg);
+            background-size: 110px;
+        }
+
+        li.canda {
+            background: #eef2f5 url(./images/clients/client_canda.svg);
+            background-size: 90px;
+            width: 135px;
+        }
+
+        li.mckinsey {
+            background: #23477f url(./images/clients/client_mckinsey.svg);
+            background-size: 250px;
+            width: 260px;
+        }
+
+        li.rimowa {
+            background: #eef2f5 url(./images/clients/client_rimowa.svg);
+            background-size: 155px;
+        }
+        .ctaBox{
+            background-color: #eef2f5;
+            font-family: sans-serif;
+            text-align: center;
+            padding: 45px 30px 50px 30px;
+        }
+        .cta_text{
+            font-weight: 500;
+            font-size: 17px;
+        }
+        .arrow_right{
+            font-weight: 300;
+        }
+        .ctaBox a{
+            background: #f47b21;
+            padding: 17px 15px;
+            border-radius: 3px;
+            font-size: 13px;
+        }
+
+        footer{
+            background-color: #184157;
+            color: #fff;
+            font-size: 14px;
+            font-family: sans-serif;
+            font-weight: 200;
+            padding: 50px 0;
+            line-height: 30px;
+        }
+        .social div,footer ul{
+            display: inline-block;
+        }
+        .social div{
+            margin: 0 3px;
+        }
+        .upper_footer{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .left_footer{
+            width: 308px;
+            height: 190px;
+        }
+        .right_footer1,.right_footer2, .right_footer3, .right_footer4{
+            width: 196px;
+            height: 190px;
+        }
+        .bottom_footer{
+            text-align: center;
+            margin: 70px 0 15px 0;
+            letter-spacing: 1px;
+        }
+        
+    </style> -->
+</head>
+
+<body>
+    <div class="index">
+       <nav class="box">
+            <div class="container">
+                <div class="nav"> 
+                    <div class="websiteLogo">
+                        <a href="./index.html"><img src="../images/weatherstack_logo_white.png" alt="weatherstackLogo" width="202" height="28"></a>
+                    </div>
+                    <ul class="menu">
+                                <li><a href="./pricing/pricing.html">Pricing</a></li>
+                                <li><a href="./documentation/documentation.html">Documentation</a></li>
+                                <li><a href="./faq/faq.html">FAQ</a></li>
+                                <li><a href="#">Blog</a></li>
+                                <li><a href="#">Status</a></li>
+                                <li class="logIn"><a href="#">Log In</a></li>
+                                <li class="signUp"><a href="#">Sign Up Free</a></li>
+                    </ul>
+                </div>
+                <section>
+                    <div class="left">
+                        <h1>Real-Time & Historical <br /> World Weather Data API</h1>
+                        <h2>Retrieve instant, accurate weather information for<br />
+                            any location in the world in lightweight JSON format
+                        </h2>
+                        <div class="trophyContainer">
+                            <span class="material-symbols-outlined">trophy
+                            </span>
+                            <span class="trophy_text"> Trusted by 75,000 companies worldwide</span>
+                        </div>
+                        <div class="buttonContainer">
+                            <a class=button href="https://weatherstack.com/product">START USING THE API</a>
+                            <span class="free">-It's free!</span>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <p class="title">Valinda, California, United States of America</p>
+                        <div class="main">
+                            <div class="image">
+                                <img src="https://weatherstack.com/site_images/weather_icon_night.svg" alt="moon" width="140" height="137">
+                                <span class="clear">clear</span>
+                            </div>
+                            <div class="temp">29℃</div>
+                            <div class="des">
+                                <p>Wind: 6 kmph</p>
+                                <p>Precip: 0 mm</p>
+                                <p>Pressure: 1012 mb</p>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="dayContainer">
+                                <span class="day">FRI</span>
+                                <img class="imgW" src="./images/sunny.jpeg" alt="sunny">
+                                <span class="temprature">29°c</span>
+                            </div>
+                            <div class="dayContainer">
+                                <span class="day">FRI</span>
+                                <img class="imgW" src="./images/sunny.jpeg" alt="sunny">
+                                <span class="temprature">29°c</span>
+                            </div>
+                            <div class="dayContainer">
+                                <span class="day">FRI</span>
+                                <img class="imgW" src="./images/sunny.jpeg" alt="sunny">
+                                <span class="temprature">29°c</span>
+                            </div>
+                            <div class="dayContainer">
+                                <span class="day">FRI</span>
+                                <img class="imgW" src="./images/sunny.jpeg" alt="sunny">
+                                <span class="temprature">29°c</span>
+                            </div>
+                            <div class="dayContainer">
+                                <span class="day">FRI</span>
+                                <img class="imgW" src="./images/sunny.jpeg" alt="sunny">
+                                <span class="temprature">29°c</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </nav>
+        <section class="logoBox">
+            <div class="container">
+                <ul class="logos">
+                    <li class="customer">Happy Customers:</li>
+                    <li><img src="https://weatherstack.com/site_images/client_deloitte.svg" alt="deloitteLogo" height="30px"></li>
+                    <li ><img src="https://weatherstack.com/site_images/client_microsoft.svg" alt="microsoftLogo" height="30px"></li>
+                    <li ><img src="https://weatherstack.com/site_images/client_warnerbros.svg" alt="warnerbrosLogo" height="30px"></li>
+                    <li><img src="https://weatherstack.com/site_images/client_wawa.svg" alt="wawaLogo" height="30px"></li>
+                    <li ><img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Schneider_Electric_2007.svg" alt="schneiderLogo" height="30px"></li>
+                    <li><img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Ericsson_logo.svg" alt="ericssonLogo" height="30px"></li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container feature_container">
+            <!-- upper part -->
+            <div class="featureBackground">
+                <div class="showBox">
+                    <span class="material-symbols-outlined featureIcon">cloud_sync
+                    </span>
+                    <h5>Real-Time, History, Forecast</h5>
+                    <p>Our API covers global weather data across the board — from a multi-year history all the way to live information and accurate weather forecasts.
+                    </p>
+                </div>
+                <div class="showBox">
+                    <span class="material-symbols-outlined featureIcon">push_pin
+                    </span>
+                    <h5>Millions of Locations</h5>
+                    <p>Make use of live or hour-by-hour weather data for millions of cities and towns worldwide, supporting a variety methods to look up any location.</p>
+                </div>
+                <div class="showBox">
+                    <span class="material-symbols-outlined featureIcon">avg_pace
+                    </span>
+                    <h5>Rock-Solid Uptime & Speed</h5>
+                    <p>Powered by best-in-class cloud infrastructure, our API delivers data in milliseconds around the clock with an uptime of nearly 100%.</p>
+                </div>
+                <div class="showBox">
+                    <span class="material-symbols-outlined featureIcon">sell
+                    </span>
+                    <h5>Start Free, Upgrade Later</h5>
+                    <p>
+                    Start testing the API immediately by signing up for our Free Plan. You can always upgrade later — no strings attached, no credit card required.
+                    </p>
+                </div>
+            </div>
+             <!-- lower part -->
+            <div class="mapSection">
+                <div class="mapLeft">
+                    <h4>Access to Global Weather Data, Developer-friendly</h4>
+                    <p>Get instant access to accurate weather data for any geo-point in the world and enjoy a rich set of capabilities:</p>
+                    <ul class="mapList">
+                        <li class="mapDetail"><span class="material-symbols-outlined">cycle</span>
+                        Real-Time Weather API
+                        </li>
+                        <li class="mapDetail"><span class="material-symbols-outlined">nest_clock_farsight_analog</span>
+                        Historical Weather API</li>
+                        <li class="mapDetail"><span class="material-symbols-outlined">event_available</span>
+                        Weather Forecasts API</li>
+                        <li class="mapDetail"><span class="material-symbols-outlined">distance</span>
+                        Location Autocomplete</li>
+                        <li class="mapDetail"><span class="material-symbols-outlined">api</span>
+                        Bulk API Endpoint</li>
+                    </ul>
+                </div>
+                <div class="worldMap">
+                    <img src="https://weatherstack.com/site_images/world_map_vector.svg" width="635" height="347" alt="world map">
+                </div>
+                <div class="clearfloat"></div>
+            </div>
+        </section>
+        
+        <section class="codeBox">
+            <div class="container">
+                <div class="example">
+                    <span>EXAMPLE</span>
+                </div>
+                <div class="exampleHead">
+                    <p>Complete Weather Data Coverage</p>
+                </div>
+                <div class="exampleDes">
+                    <p>Get years of historical weather data, request real-time weather information or make use of accurate weather forecasts.</p>
+                </div>
+                <div>
+                    <ul class="exampleButton">
+                        <li> <a class="CurrentWeather" title="Current Weather" href="#">Current Weather</a></li>
+                        <li> <a class="WeatherHistory" title="Weather History" href="#">Weather History</a></li>
+                        <li> <a class="WeatherForecast" title="Weather Forecast" href="#">Weather Forecast</a></li>
+                    </ul>
+                </div>
+                <div class="codes">
+                    <pre class="pre">
+                    {
+                        "request": {
+                            "type": "City",
+                            "query": "San Francisco, United States of America",
+                            "language": "en",
+                            "unit": "m"
+                        },
+                        "location": {
+                            "name": "San Francisco",
+                            "country": "United States of America",
+                            "region": "California",
+                            "lat": "37.775",
+                            "lon": "-122.418",
+                            "timezone_id": "America/Los_Angeles",
+                            "localtime": "2019-09-03 05:35",
+                            "localtime_epoch": 1567488900,
+                            "utc_offset": "-7.0"
+                        },
+                        "current": {
+                            "observation_time": "12:35 PM",
+                            "temparature": 16,
+                            "weather_code": 122,
+                            "weather_icons": [
+                                "https://assets.weatherstack.com/images/symbol.png"
+                            ],
+                            "weather_descriptions": [
+                                "Overcast"
+                            ],
+                        "wind_speed": 17,
+                        "wind_degree": 260,
+                        "wind_dir": "W",
+                        "pressure": 1016,
+                        "precip": 0,
+                        "humidity": 87,
+                        "cloudcover": 100,
+                        "feelslike": 16,
+                        "uv_index": 0,
+                        "visibility": 16
+                        }
+                    }
+                    </pre>
+                </div>
+
+                <div class="codeFeatureBox">
+                    <!-- first line -->
+                    <div class="codeFeature codeFeature1"><span class="material-symbols-outlined">storage
+                        </span>
+                    <h3>Reliable Data Sources</h3>
+                    <p>Powered by a strong backbone of data sources, our weather data API comes with the highest level of reliability, consistency and accuracy.
+                    </p>
+                    </div>
+                    <div class="codeFeature">
+                        <span class="material-symbols-outlined">av_timer
+                        </span>
+                        <h3>Lightning-fast Response</h3>
+                        <p>Weather data is delivered in lightweight JSON format to ensure a high level of speed and compatibility with any programming language.</p>
+                    </div>
+                    <div class="codeFeature">
+                        <span class="material-symbols-outlined">monitoring
+                        </span>
+                        <h3>Scalable Infrastructure</h3>
+                        <p>Our REST API is backed by scalable cloud infrastructure built and maintained by apilayer, capable of handling billions of requests per day.</p>
+                    </div>
+                    <!-- second line -->
+                    <div class="codeFeature codeFeature1">
+                        <span class="material-symbols-outlined">find_in_page
+                        </span>
+                        <h3>Flexible Location Lookup</h3>
+                        <p>Millions of locations can be looked up by city or region name, ZIP code, IP address, or even using latitude and longitude coordinates.</p>
+                    </div>
+                    <div class="codeFeature">
+                        <span class="material-symbols-outlined">verified_user
+                        </span>
+                        <h3>Bank-Level Security</h3>
+                        <p>All data streams sent to and from the weatherstack API are secured using industry-standard 256-bit HTTPS (SSL) encryption.</p>
+                    </div>
+                    <div class="codeFeature">
+                        <span class="material-symbols-outlined">lab_profile
+                        </span>
+                        <h3>Extensive API Documentation</h3>
+                        <p>An API is only as good as its documentation, which is why a series of interactive code examples in multiple languages are waiting for you.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+         
+        <section class="container partners">
+            <h4>Join more than 75,000 companies worldwide using the weatherstack API</h4>
+            <h5>We are proud of delivering accurate weather data to some of the smartest brands out there.</h5>
+            <ul class="brand_list">
+                <li class="daimler"></li>
+                <li class="deloitte"></li>
+                <li class="eric"></li>
+                <li class="microsoft"></li>
+                <li class="sch"></li>
+                <li class="wb"></li>
+                <li class="ww"></li>
+                <li class="canda"></li>
+                <li class="mckinsey"></li>
+                <li class="rimowa"></li>
+            </ul>
+        </section>
+
+        <section class="ctaBox">
+            <div class="container">
+                <span class="cta_text">Sign up for our Free Plan to get instant access to weather data &nbsp;</span> 
+                <span class="material-symbols-outlined arrow_right">arrow_right_alt</span>
+                <a href="https://weatherstack.com/signup">GET FREE API ACCESS</a>
+            </div>
+        </section>
+
+        <footer>
+            <div class="container">
+                <div class="upper_footer">
+                    <div class="left_footer">
+                        <div class="footer_logos">
+                            <img src="./images/weatherstack_logo_footer.png" alt="weather logo" width="197" height="35">
+                        </div>
+                        <div class="social">
+                            <div class="github"><a href="https://github.com/apilayer/weatherstack" target="_blank"><img src="https://weatherstack.com/site_images/github-original.svg" alt="github_social_logo" width="25" height="25"></a></div>
+                            <div class="facebook"><a href="https://www.facebook.com/APILayer/" target="_blank"><img src="	https://weatherstack.com/site_images/facebook-original.svg" alt="fb_social_logo" width="25" height="25"></a></div>
+                            <div class="instagram"><a href="https://www.instagram.com/apilayer/" target="_blank"><img src="./images/instagram.png" alt="instagram_social_logo" width="25" height="25"></a></div>
+                            <div class="youtube"><a href="https://www.youtube.com/channel/UCwDncja3klyMhkKXWV1zoNQ" target="_blank"><img src="./images/youtube.png" alt="youtube_social_logo" width="25" height="25"></a></div>
+                            <div class="twitter"><a href="https://twitter.com/apilayer/" target="_blank"><img src="https://weatherstack.com/site_images/twitter-original.svg" alt="twitter_social_logo" width="25" height="25"></a></div>
+                            <div class="linkedin"><a href="https://www.linkedin.com/company/apilayer/" target="_blank"><img src="https://weatherstack.com/site_images/linkedin-original.svg" alt="linkedin" width="25" height="25"></a></div>
+                        </div>
+                    </div> 
+                    <div class="right_footer1">
+                        <ul>
+                            <li>PRODUCT</li>
+                            <li><a href="https://weatherstack.com/product" target="_self" >Pricing</a></li>
+                            <li><a href="https://apilayer.com/provider" target="_blank" >List Your API</a></li>
+                            <li><a href="https://apilayer.com/why-choose-apilayer" target="_blank" >Why Choose us?</a></li>
+                            <li><a href="https://apilayer.com/" target="_blank" >Marketplace</a></li>
+                        </ul>
+                    </div>
+                    <div class="right_footer2">
+                        <ul>
+                            <li>DOCS & HELP</li>
+                            <li><a href="https://weatherstack.com/documentation" target="_self" >Documentation</a></li>
+                            <li><a href="https://blog.weatherstack.com/" target="_self" >Blog</a></li>
+                            <li><a href="https://weatherstack.com/faq" target="_self" >FAQs</a></li>
+                            <li><a href="https://apilayer.com/press" target="_blank" >Press</a></li>
+                            <li><a href="https://weatherstack.com/api-glossary" target="_self" >API Glossary</a></li>
+                        </ul>
+                    </div>
+                    <div class="right_footer3">
+                        <ul>
+                            <li>ACCOUNT</li>
+                            <li><a href="https://weatherstack.com/login" target="_self" >Log In</a></li>
+                            <li><a href="https://weatherstack.com/forgot" target="_self" >Forgot Password</a></li>
+                            <li><a href="https://weatherstack.com/signup/free" target="_self" >FFREE Signup</a></li>
+                        </ul>
+                    </div>
+                    <div class="right_footer4">
+                        <ul>
+                            <li>GET IN TOUCH</li>
+                            <li><a href="https://apilayer.com/support" target="_self" >Contact</a></li>
+                            <li><a href="https://apilayer.com/support" target="_self" >Get a quote</a></li>
+                        </ul>
+                    </div> 
+                </div>
+                <div class="bottom_footer">
+                    <a href="https://www.ideracorp.com/legal/APILayer" target="_blank" >Imprint / Legal </a>|
+                    <a href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank" >Privacy </a>|
+                    <a href="https://www.ideracorp.com/Legal/Terms-of-Use" target="_blank" >Terms </a>|
+                    <a href="https://www.ideracorp.com/Legal/APILayer/PrivacyStatement" target="_blank" >Cookie Preference </a>|
+                    <a href="https://weatherstack.com/sitemap.php" target="_self" >Sitemap</a>
+                    <br>
+                    &copy;2022 Weatherstack API, an <a href="https://apilayer.com/" target="_blank">APILayer</a>product. All rights reserved.                
+                </div> 
+     
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
